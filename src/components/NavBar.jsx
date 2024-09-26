@@ -1,0 +1,37 @@
+import React from "react";
+import { MdMoreHoriz } from "react-icons/md";
+import { FaChevronLeft } from "react-icons/fa6";
+import { FaChevronRight } from "react-icons/fa6";
+import { MdHomeFilled } from "react-icons/md";
+import SearchBar from "./SearchBar";
+import { IoNotificationsOutline } from "react-icons/io5";
+import { FaUsers } from "react-icons/fa";
+import { RxAvatar } from "react-icons/rx";
+
+const NavBar = () => {
+  return (
+    <div className="shadow p-3 w-full sticky">
+
+    <div className="flex items-center justify-between container">
+      <div className="flex gap-6 text-2xl items-center">
+        <MdMoreHoriz />
+        <div className="flex gap-2">
+          <FaChevronLeft />
+          <FaChevronRight />
+        </div>
+        <div className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
+          <MdHomeFilled />
+        </div>
+      </div>
+      <SearchBar />
+      <div className="flex gap-6 text-2xl justify-center items-center">
+        <IoNotificationsOutline />
+        <FaUsers />
+        <RxAvatar className="text-4xl" />
+      </div>
+    </div>
+    </div>
+  );
+};
+
+export default NavBar;
