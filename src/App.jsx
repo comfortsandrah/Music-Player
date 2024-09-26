@@ -1,10 +1,10 @@
 import './App.css';
-import NavBar from './components/NavBar';
+import Layout from './components/Layout';
 
 function App() {
   return (
     <div className="app-container">
-      <NavBar />
+      <Layout/>
       {/* Add more components as needed */}
     </div>
   );
