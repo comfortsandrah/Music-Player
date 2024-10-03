@@ -77,7 +77,7 @@ export const SearchResults = () => {
       {loading && <div>Loading...</div>}
       {fetchErr && <div className="text-red-500">{fetchErr}</div>}
       {fetchedData.length > 0 && (
-        <ul className="flex flex-wrap">
+        <ul className="flex flex-wrap gap-3">
           {fetchedData.map((track) => (
             <TrackCard
               key={track}
