@@ -2,14 +2,16 @@ import React, { useEffect, useState } from "react";
 import TrackCard from "./TrackCard";
 import axios from "axios";
 
-const TrackListing = () => { 
-  const url = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=eminem"; // Using a proxy to handle CORS issues
+const TrackListing = () => {
+  const url =
+    "https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=ada+ehi"; // Using a proxy to handle CORS issues
   const [artistData, setArtistData] = useState([]);
 
   const fetchInfo = async () => {
     try {
       const response = await axios.get(url);
       setArtistData(response.data.data); // Ensure you access 'data' array correctly
+      console.log(response.data.data[0]);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -22,9 +24,10 @@ const TrackListing = () => {
   return (
     <div className="flex flex-wrap mt-3 ml-3 gap-3">
       {artistData.length > 0 ? (
-        artistData.map((track, index) => (
+        artistData.map((track) => (
           <TrackCard
-            key={index}
+            key={track.id}
+            preview={track.preview}
             image={track.album.cover_medium}
             title={track.title}
             description={track.artist.name}
