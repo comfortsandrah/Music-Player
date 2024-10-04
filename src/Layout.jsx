@@ -2,17 +2,17 @@ import React from "react";
 import NavBar from "./components/NavBar";
 import SideBar from "./components/SideBar";
 import { Outlet } from "react-router-dom";
+import { MusicPlayerProvider } from "./Context/MusicPlayerContext";
 
 const Layout = () => {
   return (
-    <div className="">
+    <MusicPlayerProvider>
       <NavBar />
       <div className="flex">
-
       <SideBar />
       <Outlet />
       </div>
-    </div>
+    </MusicPlayerProvider>
   );
 };
 
