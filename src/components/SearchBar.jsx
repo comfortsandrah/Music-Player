@@ -80,7 +80,8 @@ export const SearchResults = () => {
         <ul className="flex flex-wrap gap-3">
           {fetchedData.map((track) => (
             <TrackCard
-              key={track}
+              key={track.id}
+              preview={track.preview}
               image={track.album.cover_medium}
               title={track.title}
               description={track.artist.name}
