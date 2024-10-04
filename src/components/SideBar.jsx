@@ -16,7 +16,7 @@ const SideBar = () => {
         </p>
       </div>
 
-      <div className="group w-14 h-16 bg-gradient-to-br from-pink-500 to-pink-50 opacity-80 rounded-xl flex justify-center items-center cursor-pointer hover:opacity-100 transition duration-300">
+      <div className="group w-12 h-14 bg-gradient-to-br from-pink-500 to-pink-50 opacity-80 rounded-xl flex justify-center items-center cursor-pointer hover:opacity-100 transition duration-300">
         <FaHeart
           className="text-2xl opacity-90 text-white relative"
           aria-label="Favorites"
@@ -24,7 +24,7 @@ const SideBar = () => {
         <p className="invisible group-hover:visible absolute left-20 p-3 bg-gray-200 rounded-xl text-black">Liked songs</p>
       </div>
 
-      <div className="group relative w-14 h-16 bg-gradient-to-br from-pink-500 to-pink-50 opacity-80 rounded-xl flex justify-center items-center cursor-pointer hover:opacity-100 transition duration-300">
+      <div className="group relative w-12 h-14 bg-gradient-to-br from-pink-500 to-pink-50 opacity-80 rounded-xl flex justify-center items-center cursor-pointer hover:opacity-100 transition duration-300">
         <FaBookmark
           className="text-2xl opacity-90 text-white"
           aria-label="Bookmarks"
