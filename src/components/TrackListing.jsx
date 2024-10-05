@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from "react";
 import TrackCard from "./TrackCard";
 import axios from "axios";
+import { useMusicPlayer } from "../Context/MusicPlayerContext";
 
 const TrackListing = () => {
   const url =
     "https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=ada+ehi"; // Using a proxy to handle CORS issues
   const [artistData, setArtistData] = useState([]);
+  const {setTracks} = useMusicPlayer();
 
   const fetchInfo = async () => {
     try {
       const response = await axios.get(url);
       setArtistData(response.data.data); // Ensure you access 'data' array correctly
-      console.log(response.data.data[0]);
+      setTracks(response.data.data); 
     } catch (error) {
       console.error("Error fetching data:", error);
     }
