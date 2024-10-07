@@ -6,6 +6,7 @@ import { IoIosPlayCircle } from "react-icons/io";
 import { IoMdSkipForward } from "react-icons/io";
 import { SlLoop } from "react-icons/sl";
 import { useMusicPlayer } from "../Context/MusicPlayerContext";
+import VolumeSlider from "./Volume";
 
 const MusicPlayer = () => {
   const { currentTrack, currentTitle, currentArtist, tracks, playTrack } = useMusicPlayer();
@@ -109,14 +110,15 @@ const MusicPlayer = () => {
         <SlLoop
           className={`cursor-pointer ${isLooping ? "text-pink-500" : ""}`}
           onClick={toggleLoop}
-        />
+          />
+        <VolumeSlider/>
       </div>
       <div className="w-full bg-gray-200 rounded-full h-2.5 mt-4 mb-2">
         <div
           ref={progressBarRef}
           className="bg-pink-500 h-2.5 rounded-full"
           style={{ width: `${progress}%` }}
-        ></div>
+          ></div>
       </div>
       <audio ref={audioRef} onTimeUpdate={updateProgress} onEnded={handleTrackEnd} />
     </div>
