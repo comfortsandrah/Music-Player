@@ -24,7 +24,7 @@ const TrackListing = () => {
   }, []);
 
   return (
-    <div className="flex flex-wrap mt-3 ml-3 gap-3">
+        <div className="flex flex-row sm:flex-grow flex-wrap mt-3 ml-3 gap-3">
       {artistData.length > 0 ? (
         artistData.map((track) => (
           <TrackCard
@@ -32,7 +32,7 @@ const TrackListing = () => {
             preview={track.preview}
             image={track.album.cover_medium}
             title={track.title}
-            description={track.artist.name}
+            artistName={track.artist.name}
           />
         ))
       ) : (

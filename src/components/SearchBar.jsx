@@ -84,7 +84,7 @@ export const SearchResults = () => {
               preview={track.preview}
               image={track.album.cover_medium}
               title={track.title}
-              description={track.artist.name}
+              artistName={track.artist.name}
             />
           ))}
         </ul>
