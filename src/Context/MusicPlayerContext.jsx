@@ -10,6 +10,7 @@ export const MusicPlayerProvider = ({ children }) => {
   const [currentTitle, setCurrentTitle] = useState(null);
   const [currentArtist, setCurrentArtist] = useState(null);
   const [tracks, setTracks] = useState([]);
+  const [volume, setVolume] = useState(50);
   // const navigate = useNavigate();
 
   const playTrack = (track, title, artist) => {
@@ -28,7 +29,16 @@ export const MusicPlayerProvider = ({ children }) => {
 
   return (
     <MusicPlayerContext.Provider
-      value={{ currentTrack,currentTitle,currentArtist, playTrack, tracks, setTracks }}
+      value={{
+        currentTrack,
+        currentTitle,
+        currentArtist,
+        playTrack,
+        tracks,
+        setTracks,
+        volume,
+        setVolume,
+      }}
     >
       {children}
     </MusicPlayerContext.Provider>
