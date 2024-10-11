@@ -5,7 +5,7 @@ import { FaBookmark } from "react-icons/fa6";
 
 const SideBar = () => {
   return (
-    <div className="flex flex-col shadow h-[90vh] pt-4 items-center max-w-[90px] gap-4">
+    <div className="flex flex-col shadow bg-green-500  md:h-[90vh] pt-4 items-center md:max-w-[90px] gap-4">
       <div className="group flex">
         <BiLibrary
           className="text-4xl cursor-pointer hover:text-pink-500 relative transition duration-300"
