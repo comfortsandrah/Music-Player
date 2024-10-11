@@ -20,15 +20,14 @@ const SearchBar = () => {
   };
 
   return (
-    <div>
-      <div className="flex border rounded-full justify-between items-center max-w-[620px] mx-auto">
-        <CiSearch className="ml-4 text-2xl" />
+      <div className="flex border rounded-full justify-between items-center md:max-w-[620px] mx-auto">
+        <CiSearch className="md:ml-4 text-2xl" />
         <input
           type="text"
           name="songTitle"
           placeholder="Search for artist or song title"
           value={inputData}
-          className="p-3 min-w-[550px] outline-none"
+          className="p-3 md:min-w-[550px] outline-none"
           onChange={handleChange}
           aria-label="Search for artist or song title"
         />
@@ -36,7 +35,6 @@ const SearchBar = () => {
           <PiBrowsersLight />
         </button>
       </div>
-    </div>
   );
 };
 
@@ -77,7 +75,7 @@ export const SearchResults = () => {
       {loading && <div>Loading...</div>}
       {fetchErr && <div className="text-red-500">{fetchErr}</div>}
       {fetchedData.length > 0 && (
-        <ul className="flex flex-wrap gap-3">
+        <div className=" bg-red-500 flex flex-wrap gap-6 md:gap-3 ml-3 mt-3">
           {fetchedData.map((track) => (
             <TrackCard
               key={track.id}
@@ -87,7 +85,7 @@ export const SearchResults = () => {
               artistName={track.artist.name}
             />
           ))}
-        </ul>
+        </div>
       )}
     </>
   );
