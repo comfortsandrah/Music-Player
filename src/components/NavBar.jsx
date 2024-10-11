@@ -10,8 +10,8 @@ import { RxAvatar } from "react-icons/rx";
 
 const NavBar = () => {
   return (
-    <div className="shadow p-3 w-full sticky">
-      <div className="flex items-center justify-between container">
+    <div className="shadow p-3 md:w-full sticky">
+      <div className="flex items-center justify-between">
         <div className="flex gap-6 text-2xl items-center">
           <MdMoreHoriz />
           <div className="flex gap-2">
