@@ -113,7 +113,7 @@ const MusicPlayer = () => {
           <p className="font-base">By {currentArtist}</p>
         </div>
       )}
-      <div className="flex justify-between items-center max-w-80 md:max-w-96 mx-auto md:text-2xl">
+      <div className="flex justify-around items-center  mx-auto md:text-2xl border p-2 rounded-full">
         <TiArrowShuffle
           className={`cursor-pointer ${isShuffle ? "text-pink-500" : ""}`}
           onClick={toggleShuffle}
@@ -137,9 +137,9 @@ const MusicPlayer = () => {
           className={`cursor-pointer ${isLooping ? "text-pink-500" : ""}`}
           onClick={toggleLoop}
         />
-        <div>
-          <VoiceControl />
+        <div className="text-sm flex flex-col max-w-[550px]">
           <VolumeSlider />
+          <VoiceControl />
         </div>
       </div>
       <div className="sm:w-28 md:w-full bg-gray-200 rounded-full h-2.5 mt-4 mb-2">
