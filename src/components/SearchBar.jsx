@@ -21,17 +21,17 @@ const SearchBar = () => {
 
   return (
       <div className="flex border rounded-full justify-between items-center md:max-w-[620px] mx-auto">
-        <CiSearch className="md:ml-4 text-2xl" />
+        <CiSearch className="md:ml-4 ml-2 text-lg md:text-2xl" />
         <input
           type="text"
           name="songTitle"
           placeholder="Search for artist or song title"
           value={inputData}
-          className="p-3 md:min-w-[550px] outline-none"
+          className="p-1 md:p-3 md:min-w-[550px] outline-none text-sm md:font-normal"
           onChange={handleChange}
           aria-label="Search for artist or song title"
         />
-        <button type="submit" className="mr-4 text-2xl">
+        <button type="submit" className="mr-2 md:mr-4 text-lg md:text-2xl">
           <PiBrowsersLight />
         </button>
       </div>
@@ -75,7 +75,7 @@ export const SearchResults = () => {
       {loading && <div>Loading...</div>}
       {fetchErr && <div className="text-red-500">{fetchErr}</div>}
       {fetchedData.length > 0 && (
-        <div className="flex flex-wrap gap-6 md:gap-3 ml-3 mt-3">
+        <div className="grid grid-cols-2 md:flex md:flex-wrap mt-1 md:mt-3 ml-1 md:ml-3 gap-6 md:gap-5">
           {fetchedData.map((track) => (
             <TrackCard
               key={track.id}

@@ -24,7 +24,9 @@ const NavBar = () => {
             </a>
           </div>
         </div>
-        <SearchBar />
+        <div className="hidden md:block">
+          <SearchBar />
+        </div>
         <div className="flex gap-6 text-2xl justify-center items-center ">
           <IoNotificationsOutline className="hover:scale-105" />
           <FaUsers className="hover:scale-105" />

@@ -106,7 +106,7 @@ const MusicPlayer = () => {
   // if (volume) audioRef.current.volume = 1;
 
   return (
-    <div className="shadow bottom-0 sticky z-10 bg-white md:p-4 p-3 ml-3">
+    <div className="shadow bottom-0 sticky z-10 bg-white md:p-4 p-3">
       {currentTitle && currentArtist && (
         <div>
           <h3 className="font-semibold text-xl">{currentTitle}</h3>

@@ -24,7 +24,7 @@ const TrackListing = () => {
   }, []);
 
   return (
-        <div className="flex flex-wrap mt-3 ml-3 gap-6 md:gap-3">
+        <div className="grid grid-cols-2 md:flex md:flex-wrap mt-1 md:mt-3 ml-1 md:ml-3 gap-6 md:gap-5">
       {artistData.length > 0 ? (
         artistData.map((track) => (
           <TrackCard
