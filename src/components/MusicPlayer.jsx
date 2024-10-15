@@ -106,19 +106,19 @@ const MusicPlayer = () => {
   // if (volume) audioRef.current.volume = 1;
 
   return (
-    <div className="shadow bottom-0 sticky z-10 bg-white md:p-4 p-3">
+    <div className="shadow bottom-0 fixed w-full z-10 bg-white md:p-4 px-8">
       {currentTitle && currentArtist && (
         <div>
           <h3 className="font-semibold text-xl">{currentTitle}</h3>
           <p className="font-base">By {currentArtist}</p>
         </div>
       )}
-      <div className="flex justify-around items-center  mx-auto md:text-2xl border p-2 rounded-full">
+      <div className="flex justify-around items-center md:text-2xl border p-2 rounded-full">
         <TiArrowShuffle
           className={`cursor-pointer ${isShuffle ? "text-pink-500" : ""}`}
           onClick={toggleShuffle}
         />
-        <div className="flex md:gap-6 md:text-2xl items-center">
+        <div className="flex md:gap-6 text-lg md:text-2xl items-center">
           <IoMdSkipBackward onClick={skipBackward} className="cursor-pointer" />
           {isPlaying ? (
             <IoPauseCircle
@@ -137,12 +137,12 @@ const MusicPlayer = () => {
           className={`cursor-pointer ${isLooping ? "text-pink-500" : ""}`}
           onClick={toggleLoop}
         />
-        <div className="text-sm flex flex-col max-w-[550px]">
+        <div className="text-sm flex flex-col">
           <VolumeSlider />
           <VoiceControl />
         </div>
       </div>
-      <div className="sm:w-28 md:w-full bg-gray-200 rounded-full h-2.5 mt-4 mb-2">
+      <div className=" m-3  bg-gray-200 rounded-full h-2.5 mt-2 md:mt-4 mb-1 md:mb-2">
         <div
           ref={progressBarRef}
           className="bg-pink-500 h-2.5 rounded-full"
