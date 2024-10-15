@@ -10,11 +10,11 @@ import { RxAvatar } from "react-icons/rx";
 
 const NavBar = () => {
   return (
-    <div className="shadow p-3 md:w-full sticky">
+    <div className="shadow p-3 w-full fixed top-0 bg-white">
       <div className="flex items-center justify-between">
-        <div className="flex gap-6 text-2xl items-center">
+        <div className="flex gap-3 md:gap-6 text-lg md:text-2xl items-center">
           <MdMoreHoriz />
-          <div className="flex gap-2">
+          <div className="flex gap-2 text-lg md:text-2xl">
             <FaChevronLeft />
             <FaChevronRight />
           </div>
@@ -27,10 +27,10 @@ const NavBar = () => {
         <div className="hidden md:block">
           <SearchBar />
         </div>
-        <div className="flex gap-6 text-2xl justify-center items-center ">
+        <div className="flex gap-3 md:gap-6 text-lg md:text-2xl justify-center items-center ">
           <IoNotificationsOutline className="hover:scale-105" />
           <FaUsers className="hover:scale-105" />
-          <RxAvatar className="text-4xl hover:scale-105" />
+          <RxAvatar className="text-lg md:text-4xl hover:scale-105" />
         </div>
       </div>
     </div>
