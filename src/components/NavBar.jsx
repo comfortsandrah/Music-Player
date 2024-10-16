@@ -10,7 +10,7 @@ import { RxAvatar } from "react-icons/rx";
 
 const NavBar = () => {
   return (
-    <div className="shadow p-3 w-full fixed top-0 bg-white">
+    <div className="shadow p-3 z-10 w-full fixed top-0 dark:bg-black bg-white">
       <div className="flex items-center justify-between">
         <div className="flex gap-3 md:gap-6 text-lg md:text-2xl items-center">
           <MdMoreHoriz />
@@ -18,7 +18,7 @@ const NavBar = () => {
             <FaChevronLeft />
             <FaChevronRight />
           </div>
-          <div className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center hover:scale-105">
+          <div className="w-10 h-10 dark:bg-gray-600 bg-gray-300 rounded-full flex items-center justify-center hover:scale-105">
             <a href="/">
               <MdHomeFilled />
             </a>

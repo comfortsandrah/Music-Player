@@ -11,17 +11,17 @@ const SideBar = () => {
           className="text-xl md:text-4xl cursor-pointer hover:text-pink-500 relative transition duration-300"
           aria-label="Library"
         />
-        <p className="invisible group-hover:visible absolute left-20 text-black bg-gray-200 p-2 md:p-3 rounded-xl ">
+        <p className="invisible group-hover:visible absolute left-20 text-black dark:text-white dark:bg-gray-500 bg-gray-200 p-2 md:p-3 rounded-xl ">
           Expand your Library
         </p>
       </div>
 
       <div className="group w-8 h-12 md:w-12 md:h-14 bg-gradient-to-br from-pink-500 to-pink-50 opacity-80 rounded-md md:rounded-xl flex justify-center items-center cursor-pointer hover:opacity-100 transition duration-300">
         <FaHeart
-          className="text-lg md:text-2xl opacity-90 text-white relative"
+          className="text-lg md:text-2xl opacity-90  text-white relative"
           aria-label="Favorites"
         />
-        <p className="invisible group-hover:visible absolute left-20 p-3 bg-gray-200 rounded-md md:rounded-xl text-black">Liked songs</p>
+        <p className="invisible group-hover:visible absolute left-20 p-3 bg-gray-200 rounded-md md:rounded-xl dark:text-white dark:bg-gray-500 text-black">Liked songs</p>
       </div>
 
       <div className="group relative w-8 h-12 md:w-12 md:h-14 bg-gradient-to-br from-pink-500 to-pink-50 opacity-80 rounded-xl flex justify-center items-center cursor-pointer hover:opacity-100 transition duration-300">
@@ -29,7 +29,7 @@ const SideBar = () => {
           className="text-lg md:text-2xl opacity-90 text-white"
           aria-label="Bookmarks"
         />
-        <p className="invisible group-hover:visible absolute left-20 p-3  bg-gray-200 rounded-xl text-black">Your Episode</p>
+        <p className="invisible group-hover:visible absolute left-20 p-3  bg-gray-200 rounded-xl dark:text-white dark:bg-gray-500 text-black">Your Episode</p>
       </div>
     </div>
   );

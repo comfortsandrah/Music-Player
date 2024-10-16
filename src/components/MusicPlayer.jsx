@@ -106,7 +106,7 @@ const MusicPlayer = () => {
   // if (volume) audioRef.current.volume = 1;
 
   return (
-    <div className="shadow bottom-0 fixed w-full z-10 bg-white md:p-4 px-8">
+    <div className="shadow bottom-0 fixed w-full z-10 dark:bg-black bg-white md:p-4 px-8">
       {currentTitle && currentArtist && (
         <div>
           <h3 className="font-semibold text-xl">{currentTitle}</h3>
@@ -142,7 +142,7 @@ const MusicPlayer = () => {
           <VoiceControl />
         </div>
       </div>
-      <div className=" m-3  bg-gray-200 rounded-full h-2.5 mt-2 md:mt-4 mb-1 md:mb-2">
+      <div className=" m-3 dark:bg-gray-500  bg-gray-200 rounded-full h-2.5 mt-2 md:mt-4 mb-1 md:mb-2">
         <div
           ref={progressBarRef}
           className="bg-pink-500 h-2.5 rounded-full"
