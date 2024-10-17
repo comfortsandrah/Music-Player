@@ -9,10 +9,10 @@ const Layout = () => {
   return (
     <MusicPlayerProvider>
       <NavBar />
-      <div className="md:hidden m-2 mt-16 bg-white mx-auto w-full rounded-full fixed ">
+      <div className="md:hidden m-2 mt-16 z-10 bg-white mx-auto w-full rounded-full fixed ">
       <SearchBar/>
       </div>
-      <div>
+      <div className="dark:bg-black">
         <Outlet />
       </div>
     </MusicPlayerProvider>
