@@ -5,10 +5,19 @@ import MusicPlayer from "../components/MusicPlayer";
 
 const Home = () => {
   return (
-    <section className="h-[137vh] mx-autoflex-grow">     
-      <SearchResults />      
-      <h2 className="font-semibold md:font-bold text-xl md:text-3xl my-1 md:my-3 p-2 md:p-6 ml-3">Made for you</h2>      
+    <section className="mx-auto flex-grow dark:bg-black pt-10 px-2 md:px-1">
+      {/* Search Results */}
+      <SearchResults />
+      
+      {/* Title Section */}
+      <h2 className="font-semibold md:font-bold dark:text-white text-xl pt-4 md:text-3xl my-4 md:my-6">
+        Made for you
+      </h2>
+      
+      {/* Track Listing */}
       <TrackListing />
+      
+      {/* Music Player */}
       <MusicPlayer />
     </section>
   );

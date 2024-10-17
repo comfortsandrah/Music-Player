@@ -20,14 +20,14 @@ const SearchBar = () => {
   };
 
   return (
-      <div className="flex border rounded-full justify-between items-center md:max-w-[620px] mx-auto">
+      <div className="flex border dark:bg-gray-700 dark:text-white rounded-full justify-between items-center md:max-w-[620px]">
         <CiSearch className="md:ml-4 ml-2 text-lg md:text-2xl" />
         <input
           type="text"
           name="songTitle"
           placeholder="Search for artist or song title"
           value={inputData}
-          className="p-1 md:p-3 md:min-w-[550px] outline-none text-sm md:font-normal"
+          className="p-1 md:p-3 md:min-w-[550px] outline-none text-sm md:font-normal dark:bg-gray-700 dark:text-white"
           onChange={handleChange}
           aria-label="Search for artist or song title"
         />
