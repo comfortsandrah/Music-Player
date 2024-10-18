@@ -5,7 +5,7 @@ import MusicPlayer from "../components/MusicPlayer";
 
 const Home = () => {
   return (
-    <section className="mx-auto flex-grow dark:bg-black pt-10 px-2 md:px-1">
+    <section className="mx-auto flex-grow dark:bg-black pt-20 md:pt-10 px-2 md:px-1">
       {/* Search Results */}
       <SearchResults />
       
