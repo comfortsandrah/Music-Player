@@ -92,6 +92,12 @@ const MusicPlayer = () => {
   };
 
   useEffect(() => {
+    if (audioRef) {
+      audioRef.current.volume = volume / 100;
+    }
+  }, [volume]);
+
+  useEffect(() => {
     if (currentTrack) {
       audioRef.current.pause();
       audioRef.current.src = currentTrack;
@@ -139,7 +145,11 @@ const MusicPlayer = () => {
         />
         <div className="text-sm flex flex-col">
           <VolumeSlider />
-          <VoiceControl />
+          <VoiceControl
+            currentTrack={currentTrack}
+            currentTitle={currentTitle}
+            currentArtist={currentArtist}
+          />
         </div>
       </div>
       <div className=" m-3 dark:bg-gray-500  bg-gray-200 rounded-full h-2.5 mt-2 md:mt-4 mb-1 md:mb-2">
