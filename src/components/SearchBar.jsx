@@ -7,7 +7,7 @@ import TrackCard from "./TrackCard";
 
 const SearchBar = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [inputData, setInputData] = useState(searchParams.get("q"));
+  const [inputData, setInputData] = useState(searchParams.get("q") ?? "");
 
   const debounced = useDebouncedCallback((value) => {
     setSearchParams({ q: value }), 1000;
@@ -20,7 +20,7 @@ const SearchBar = () => {
   };
 
   return (
-      <div className="flex border dark:bg-gray-700 dark:text-white rounded-full justify-between items-center md:max-w-[620px]">
+      <div className="flex border w-[250px mx-auto] dark:bg-gray-700 dark:text-white rounded-full justify-between items-center md:max-w-[620px]">
         <CiSearch className="md:ml-4 ml-2 text-lg md:text-2xl" />
         <input
           type="text"
