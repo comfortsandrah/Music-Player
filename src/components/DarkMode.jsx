@@ -27,7 +27,7 @@ function DarkMode() {
   };
 
   return (
-    <div className="bg-white dark:bg-gray-700 transition-all duration-300">
+    <div className="bg-white dark:bg-gray-700 rounded-full transition-all duration-300">
       <button
         className=" bg-gray-300 dark:bg-gray-600 p-2 rounded-full text-sm"
         onClick={toggleDarkMode}

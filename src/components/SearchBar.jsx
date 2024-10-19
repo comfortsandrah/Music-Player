@@ -20,20 +20,22 @@ const SearchBar = () => {
   };
 
   return (
-      <div className="flex border w-[250px mx-auto] dark:bg-gray-700 dark:text-white rounded-full justify-between items-center md:max-w-[620px]">
+    <div className="  dark:bg-black  p-4 md:p-0 ">
+      <div className="flex border  mx-auto dark:bg-gray-700 dark:text-white rounded-full justify-between items-center md:max-w-[620px]">
         <CiSearch className="md:ml-4 ml-2 text-lg md:text-2xl" />
         <input
           type="text"
           name="songTitle"
           placeholder="Search for artist or song title"
           value={inputData}
-          className="p-1 md:p-3 md:min-w-[550px] outline-none text-sm md:font-normal dark:bg-gray-700 dark:text-white"
+          className="p-1 md:p-3 md:min-w-[550px] outline-none text-sm  md:font-normal dark:bg-gray-700 dark:text-white"
           onChange={handleChange}
           aria-label="Search for artist or song title"
-        />
+          />
         <button type="submit" className="mr-2 md:mr-4 text-lg md:text-2xl">
           <PiBrowsersLight />
         </button>
+      </div>
       </div>
   );
 };
